@@ -1,17 +1,49 @@
 {
-  "dependencies": {
-    "chalk": "^2.4.2",
-    "lodash": "^4.17.11",
-    "puppeteer": "^1.12.2"
+  "name": "msl-deploy",
+  "version": "0.1",
+  "author": "James Canning @brudil",
+  "bin": {
+    "msl-deploy": "./bin/run"
   },
-  "scripts": {
-    "dev": "`yarn bin`/tsc -w",
-    "prepare": "`yarn bin`/tsc",
-    "format": "`yarn bin`/prettier --write \"src/**/*.{ts,tsx}\"",
-    "test": "`yarn bin`/jest"
+  "bugs": "https://github.com/sussexstudent//issues",
+  "dependencies": {
+    "@oclif/command": "^1",
+    "@oclif/config": "^1",
+    "@oclif/plugin-help": "^2",
+    "chalk": "^2.4.2",
+    "fs-jetpack": "^2.2.2",
+    "lodash": "^4.17.11",
+    "puppeteer": "^1.12.2",
+    "tslib": "^1"
   },
   "devDependencies": {
-    "@types/node": "^11.9.5",
-    "typescript": "^3.3.3333"
-  }
+    "@oclif/tslint": "^3",
+    "@types/node": "^10",
+    "ts-node": "^8",
+    "tslint": "^5",
+    "typescript": "^3.3"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/lib"
+  ],
+  "homepage": "https://github.com/sussexstudent/",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "oclif": {
+    "bin": "msl-deploy"
+  },
+  "repository": "sussexstudent/",
+  "scripts": {
+    "posttest": "tslint -p . -t stylish",
+    "prepack": "rm -rf lib && tsc -b",
+    "test": "echo NO TESTS"
+  },
+  "types": "lib/index.d.ts"
 }
