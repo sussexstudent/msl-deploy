@@ -1,6 +1,6 @@
 {
   "name": "@ussu/msl-deploy",
-  "version": "0.1",
+  "version": "0.1.0",
   "author": "James Canning @brudil",
   "bin": {
     "msl-deploy": "./bin/run"
