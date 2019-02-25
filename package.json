@@ -1,11 +1,11 @@
 {
-  "name": "msl-deploy",
+  "name": "@ussu/msl-deploy",
   "version": "0.1",
   "author": "James Canning @brudil",
   "bin": {
     "msl-deploy": "./bin/run"
   },
-  "bugs": "https://github.com/sussexstudent//issues",
+  "bugs": "https://github.com/sussexstudent/msl-deploy/issues",
   "dependencies": {
     "@oclif/command": "^1",
     "@oclif/config": "^1",
