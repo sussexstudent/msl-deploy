@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "lodash": "^4.17.11",
+    "puppeteer": "^1.12.2"
+  },
+  "scripts": {
+    "dev": "`yarn bin`/tsc -w",
+    "prepare": "`yarn bin`/tsc",
+    "format": "`yarn bin`/prettier --write \"src/**/*.{ts,tsx}\"",
+    "test": "`yarn bin`/jest"
+  },
+  "devDependencies": {
+    "@types/node": "^11.9.5",
+    "typescript": "^3.3.3333"
+  }
+}
