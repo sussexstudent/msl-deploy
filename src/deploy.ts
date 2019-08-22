@@ -18,17 +18,14 @@ interface Auth {
 }
 
 export const deploy = async (auth: Auth, payload: Payload) => {
-  const browser = await puppeteer.launch({ headless: true, args: ['--disable-xss-auditor'] });
+  const browser = await puppeteer.launch({ headless: false, args: ['--disable-xss-auditor'] });
   const page = await browser.newPage();
   console.log(`${chalk.green('✔')} started msl-deploy`)
   await page.goto('https://sussexstudent.com/login');
 
-  const button = await page.$('.button3')
-  await button.click();
-
-  const usernameInput = await page.$('#ctl00_ctl15_UserName')
+  const usernameInput = await page.$('#ctl00_BSMSlogincontrol_UserName')
   await usernameInput.type(auth.username);
-  const passwordInput = await page.$('#ctl00_ctl15_Password')
+  const passwordInput = await page.$('#ctl00_BSMSlogincontrol_Password')
   await passwordInput.type(auth.password);
   await Promise.all([
       passwordInput.press('Enter'),
